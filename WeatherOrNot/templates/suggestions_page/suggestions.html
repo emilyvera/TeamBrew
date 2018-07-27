@@ -35,27 +35,28 @@
       <a href="{{logoutUrl}}">Log Out</a>
     </div>
 
-    <h1>Tops:</h1>
+    <h1 class = "add_favs">Tops:</h1>
       <div id="tops"></div>
     <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
-    <h1>Bottoms:</h1>
+    <h1 class = "add_favs">Bottoms:</h1>
       <div id="bottoms"></div>
     <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
-    <h1>Skirts:</h1>
+    <h1 class = "add_favs">Skirts:</h1>
       <div id="skirts"></div>
     <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
-    <h1>Dresses:</h1>
+    <h1 class = "add_favs">Dresses:</h1>
       <div id="dresses"></div>
     <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
-    <h1>Coats:</h1>
-      <div id="coats"></div>
-    <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
-    <h1>Jackets:</h1>
-      <div id="jackets"></div>
-    <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
-    <h1>Sweaters:</h1>
+    <h1 class = "add_favs">Sweaters:</h1>
       <div id="sweaters"></div>
     <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
+    <h1 class = "add_favs">Jackets:</h1>
+      <div id="jackets"></div>
+    <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
+    <h1 class = "add_favs">Coats:</h1>
+      <div id="coats"></div>
+    <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
+
   </body>
 
 <!-- <head>
@@ -82,19 +83,19 @@
   </ul>
 </nav>
   </nav>
-  <h1>TOPS</h1>
+  <h1 class = "add_favs">TOPS</h1>
   {% for shirt in topsWardrobe %}
     <img class = "img" src= "{{shirt.url}}" />
   {% endfor %}
-  <h1>BOTTOMS</h1>
+  <h1 class = "add_favs">BOTTOMS</h1>
   {% for pant in bottomWardrobe%}
     <img class="img" src= "{{pant.url}}" />
   {% endfor %}
-  <h1>SKIRT</h1>
+  <h1 class = "add_favs">SKIRT</h1>
   {% for skirt in skirtWardrobe%}
     <img class="img" src= "{{skirt.url}}" />
   {% endfor %}
-  <h1>DRESSSES</h1>
+  <h1 class = "add_favs">DRESSSES</h1>
   {% for dress in dressWardrobe%}
     <img class="img" src= "{{dress.url}}" />
   {% endfor %}
