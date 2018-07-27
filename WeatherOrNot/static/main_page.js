@@ -24,13 +24,7 @@ fetch("https://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weathe
   // the gifUrl is saved successfully.
   function addGifToFavorites(doneCallback) {
     var zipcode= document.querySelector('#zip').value;
-    jQuery.post("/", {zipcode}, (result) => {
-      var zipstuff = document.querySelector()
-      console.log(result)
-      alert()
-    });
-
-    console.log(zipcode)
+    jQuery.post("/", {zipcode}, doneCallback);
   }
 
   // TODO: Create an event handler for when the button is clicked

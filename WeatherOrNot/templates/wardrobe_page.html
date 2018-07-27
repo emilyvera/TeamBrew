@@ -1,6 +1,5 @@
 <html>
   <head>
-    <link rel="shortcut icon" href="http://www.free-icons-download.net/images/sun-icon-47359.png">
     <title>Wardrobe</title>
     <link rel="stylesheet" href="/static/style.css"></link>
     <meta charset="utf-8">
@@ -9,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
-  <body class="body" background="{{background_url}}">
+  <body class="body" background="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/D8qa-2E/rainy-stormy-darkness-wet-weather-background-depressed-sad-background_bzxjr4x7h__F0000.png">
     <nav class="navbar navbar-inverse">
       <ul class = "nav navbar-nav">
         <li><h1 id="headerz">Weather or Not</h1></li>
@@ -86,53 +85,13 @@
       </span>
       {% endfor %}
       <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
-    </div>
-
-    <p>Sweaters:</p>
-    <div>
-      {% for sweater in sweaterWardrobe %}
-      <span class='itemContainer'>
-        Checkbox: <input type="checkbox" id="myCheck" name="{{sweater.key.urlsafe()}}">
-        <img class = "img" src = "{{sweater.url}}" width="500" height="375" />
-
-      </span>
-      {% endfor %}
-      <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
-    </div>
-
-    <p>Jackets:</p>
-    <div>
-      {% for jacket in jacketWardrobe %}
-      <span class='itemContainer'>
-        Checkbox: <input type="checkbox" id="myCheck" name="{{jacket.key.urlsafe()}}">
-        <img class = "img" src = "{{jacket.url}}" width="500" height="375" />
-
-      </span>
-      {% endfor %}
-      <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
-    </div>
-
-
-    <p>Coats:</p>
-    <div>
-      {% for coat in coatWardrobe %}
-      <span class='itemContainer'>
-        Checkbox: <input type="checkbox" id="myCheck" name="{{coat.key.urlsafe()}}">
-        <img class = "img" src = "{{coat.url}}" width="500" height="375" />
-      </span>
-      {% endfor %}
-      <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
-    </div>
-
-
-
       <input type="submit" value="Send to Laundry" name = "toLaundry">
       <input type = "submit" value = "Delete Item" name = "deleteClothing">
     </form>
     </div>
 
     <h1 class='laundryWords'>
-      Laundry is Below
+      Stuff below this is laundry
     </h1>
 
     <div>
