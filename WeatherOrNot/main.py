@@ -104,6 +104,9 @@ class WardrobePage(webapp2.RequestHandler):
             "bottomWardrobe":WardrobeSave.query(WardrobeSave.type=="pants", WardrobeSave.laundry==False, WardrobeSave.user==user.nickname()).fetch(),
             "skirtWardrobe":WardrobeSave.query(WardrobeSave.type=="skirt", WardrobeSave.laundry==False, WardrobeSave.user==user.nickname()).fetch(),
             "dressWardrobe":WardrobeSave.query(WardrobeSave.type=="dress", WardrobeSave.laundry==False, WardrobeSave.user==user.nickname()).fetch(),
+            "sweaterWardrobe":WardrobeSave.query(WardrobeSave.type=="sweater", WardrobeSave.laundry==False, WardrobeSave.user==user.nickname()).fetch(),
+            "jacketWardrobe":WardrobeSave.query(WardrobeSave.type=="jacket", WardrobeSave.laundry==False, WardrobeSave.user==user.nickname()).fetch(),
+            "coatWardrobe":WardrobeSave.query(WardrobeSave.type=="coat", WardrobeSave.laundry==False, WardrobeSave.user==user.nickname()).fetch(),
             "laundry":WardrobeSave.query(WardrobeSave.laundry==True, WardrobeSave.user==user.nickname()).fetch(),
         }
         self.response.write(response_html.render(values))
