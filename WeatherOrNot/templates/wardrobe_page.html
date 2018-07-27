@@ -36,76 +36,98 @@
     <form method='post'>
       <p>Tops:</p>
       {% for top in topsWardrobe %}
-          Checkbox: <input type="checkbox" id="myCheck" name="{{top.key.urlsafe()}}"><br>
-          <img class = "img" src = "{{top.url}}" width="500" height="375" />
+          <img class = "img" src = "{{top.url}}" />
       {% endfor %}
-      <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
+      <p></p>
+      {% for top in topsWardrobe %}
+          <input type="checkbox" id="myCheck" name="{{top.key.urlsafe()}}">
+          <label for="tops">Select &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</label>
+      {% endfor %}
+      <p><br /><br /></p>
     </div>
-
 
     <p>Bottoms:</p>
     <div>
       {% for pant in bottomWardrobe %}
-        Checkbox: <input type="checkbox" id="myCheck" name="{{pant.key.urlsafe()}}">
-        <img class = "img" src = "{{pant.url}}" width="500" height="375" />
+          <img class = "img" src = "{{pant.url}}" />
       {% endfor %}
-      <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
+      <p></p>
+      {% for pant in bottomWardrobe %}
+          <input type="checkbox" id="myCheck" name="{{pant.key.urlsafe()}}">
+          <label for="pants">Select &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</label>
+      {% endfor %}
+      <p><br /><br /></p>
     </div>
 
 
     <p>Skirts:</p>
     <div>
       {% for skirt in skirtWardrobe %}
-        Checkbox: <input type="checkbox" id="myCheck" name="{{skirt.key.urlsafe()}}">
-        <img class = "img" src = "{{skirt.url}}" width="500" height="375" />
+          <img class = "img" src = "{{skirt.url}}" />
       {% endfor %}
-      <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
+      <p></p>
+      {% for skirt in skirtWardrobe %}
+          <input type="checkbox" id="myCheck" name="{{skirt.key.urlsafe()}}">
+          <label for="pants">Select &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</label>
+      {% endfor %}
+      <p><br /><br /></p>
     </div>
 
 
     <p>Dresses:</p>
     <div>
       {% for dress in dressWardrobe %}
-        Checkbox: <input type="checkbox" id="myCheck" name="{{dress.key.urlsafe()}}">
-        <img class = "img" src = "{{dress.url}}" width="500" height="375" />
+          <img class = "img" src = "{{dress.url}}" />
       {% endfor %}
-      <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
+      <p></p>
+      {% for dress in dressWardrobe %}
+          <input type="checkbox" id="myCheck" name="{{dress.key.urlsafe()}}">
+          <label for="pants">Select &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</label>
+      {% endfor %}
+      <p><br /><br /></p>
     </div>
+
 
     <p>Sweaters:</p>
     <div>
       {% for sweater in sweaterWardrobe %}
-      <span class='itemContainer'>
-        Checkbox: <input type="checkbox" id="myCheck" name="{{sweater.key.urlsafe()}}">
-        <img class = "img" src = "{{skirt.url}}" width="500" height="375" />
-
-      </span>
+          <img class = "img" src = "{{sweater.url}}" />
       {% endfor %}
-      <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
+      <p></p>
+      {% for sweater in sweaterWardrobe %}
+          <input type="checkbox" id="myCheck" name="{{sweater.key.urlsafe()}}">
+          <label for="pants">Select &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</label>
+      {% endfor %}
+      <p><br /><br /></p>
     </div>
+
 
     <p>Jackets:</p>
     <div>
       {% for jacket in jacketWardrobe %}
-      <span class='itemContainer'>
-        Checkbox: <input type="checkbox" id="myCheck" name="{{jacket.key.urlsafe()}}">
-        <img class = "img" src = "{{skirt.url}}" width="500" height="375" />
-
-      </span>
+          <img class = "img" src = "{{jacket.url}}" />
       {% endfor %}
-      <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
+      <p></p>
+      {% for jacket in jacketWardrobe %}
+          <input type="checkbox" id="myCheck" name="{{jacket.key.urlsafe()}}">
+          <label for="pants">Select &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</label>
+      {% endfor %}
+      <p><br /><br /></p>
     </div>
 
     <p>Coats:</p>
     <div>
       {% for coat in coatWardrobe %}
-      <span class='itemContainer'>
-        Checkbox: <input type="checkbox" id="myCheck" name="{{coat.key.urlsafe()}}">
-        <img class = "img" src = "{{skirt.url}}" width="500" height="375" />
-
-      </span>
+          <img class = "img" src = "{{coat.url}}" />
       {% endfor %}
-      <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
+      <p></p>
+      {% for coat in coatWardrobe %}
+          <input type="checkbox" id="myCheck" name="{{coat.key.urlsafe()}}">
+          <label for="pants">Select &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</label>
+      {% endfor %}
+      <p><br /><br /></p>
+    </div>
+
       <input type="submit" value="Send to Laundry" name = "toLaundry">
       <input type = "submit" value = "Delete Item" name = "deleteClothing">
     </form>
