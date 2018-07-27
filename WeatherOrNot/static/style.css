@@ -6,7 +6,10 @@
     background-repeat:   no-repeat;
     background-size:     cover;
 }
-
+.add_favs{
+  color:white;
+  font-family:Futura;
+}
 body {
   background-repeat: no-repeat;
   background-attachment: fixed;
