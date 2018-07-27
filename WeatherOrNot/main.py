@@ -290,7 +290,7 @@ class FavoritesHandler(webapp2.RequestHandler):
 
         time.sleep(1)
         #logging.info('server saw a request to add %s to list of favorites' % (requestUrl))
-        self.redirect('/add_favorite')
+        self.redirect('/list_favorite')
 
 class ListFavoritesHandler(webapp2.RequestHandler):
     def get(self):
