@@ -33,15 +33,16 @@
       <p id="nav">{{user_nickname}}</p>
       <a href="{{logoutUrl}}">Log Out</a>
     </div>
-
-
-    {% for item in favorites %}
-      <img class = "img" src= "{{item.topUrl}}" />
-    {% endfor %}
-    <p></p>
-    {% for item in favorites %}
-      <img class = "img" src= "{{item.bottomUrl}}" />
-    {% endfor %}
+    <div>
+      <form method='post'>
+      {% for clothing in laundry %}
+        <input type="checkbox" id="myCheck" name="{{clothing.key.urlsafe()}}">
+        <img class = "img" src = "{{clothing.url}}" width="500" height="375" />
+      {% endfor %}
+      <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
+      <input type="submit" value="Do Laundry" name="toWardrobe">
+    </form>
+    </div>
 
   </body>
 </html>
