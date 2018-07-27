@@ -38,5 +38,5 @@ fetch("https://api.worldweatheronline.com/premium/v1/weather.ashx?key=" + weathe
 
 
   window.addEventListener('load', () => {
-    document.querySelector('#submit').addEventListener("click", submitClick)
+    //document.querySelector('#submit').addEventListener("click", submitClick)
   });
