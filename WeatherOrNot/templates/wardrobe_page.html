@@ -34,7 +34,7 @@
 
     <div id="image_wrap">
     <form method='post'>
-      <p>Tops:</p>
+      <p id = "header">Tops:</p>
       {% for top in topsWardrobe %}
           <img class = "img" src = "{{top.url}}" />
       {% endfor %}
@@ -46,7 +46,7 @@
       <p><br /><br /></p>
     </div>
 
-    <p>Bottoms:</p>
+    <p id = "header">Bottoms:</p>
     <div>
       {% for pant in bottomWardrobe %}
           <img class = "img" src = "{{pant.url}}" />
@@ -60,7 +60,7 @@
     </div>
 
 
-    <p>Skirts:</p>
+    <p id = "header">Skirts:</p>
     <div>
       {% for skirt in skirtWardrobe %}
           <img class = "img" src = "{{skirt.url}}" />
@@ -74,7 +74,7 @@
     </div>
 
 
-    <p>Dresses:</p>
+    <p id = "header">Dresses:</p>
     <div>
       {% for dress in dressWardrobe %}
           <img class = "img" src = "{{dress.url}}" />
@@ -88,7 +88,7 @@
     </div>
 
 
-    <p>Sweaters:</p>
+    <p id = "header">Sweaters:</p>
     <div>
       {% for sweater in sweaterWardrobe %}
           <img class = "img" src = "{{sweater.url}}" />
@@ -102,7 +102,7 @@
     </div>
 
 
-    <p>Jackets:</p>
+    <p id = "header">Jackets:</p>
     <div>
       {% for jacket in jacketWardrobe %}
           <img class = "img" src = "{{jacket.url}}" />
@@ -115,7 +115,7 @@
       <p><br /><br /></p>
     </div>
 
-    <p>Coats:</p>
+    <p id = "header">Coats:</p>
     <div>
       {% for coat in coatWardrobe %}
           <img class = "img" src = "{{coat.url}}" />

@@ -7,7 +7,7 @@
     background-size:     cover;
 }
 .add_favs{
-  color:white;
+  color:black;
   font-family:Futura;
 }
 body {
@@ -29,6 +29,7 @@ body {
   font-weight: 900;
   margin-left: 10px;
   font-family:Futura;
+  color: white;
 }
 #submit{
   color:black;
@@ -38,7 +39,7 @@ body {
 }
 #nav{
   font-family:Futura;
-  color:white;
+  color:black;
   font-size:18px;
 }
 
