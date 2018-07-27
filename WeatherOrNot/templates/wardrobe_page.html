@@ -2,6 +2,7 @@
   <head>
     <title>Wardrobe</title>
     <link rel="stylesheet" href="/static/style.css"></link>
+    <link rel="shortcut icon" href="http://files.softicons.com/download/web-icons/vector-stylish-weather-icons-by-bartosz-kaszubowski/ico/sun.rays.medium.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -20,7 +21,7 @@
         <li id="nav"><a href="/suggestion">Suggestions</a></li>
         <li id="nav"><a href="/add_favorite">Add Favorite Outfits</a></li>
         <li id="nav"><a href="/list_favorite">Favorites!</a></li>
-        <li id="nav"><a href="/calendar">History</a></li>
+
         <li><a href="http://twitter.com/?status=My outfit is faab!"><img class="img2" src="http://www.anthonysgulfport.com/wp-content/uploads/2014/09/twitter-icon-300x300.png" id="twitter"/></a></li>
         <li><a href="https://www.facebook.com/share.php?u="><img class="img2" src="https://seeklogo.com/images/F/facebook-icon-logo-C61047A9E7-seeklogo.com.png" id="facebook"/></a></li>
         <li><a href="https://www.instagram.com"><img class="img2" src="https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png" id="instagram"/></a></li>
@@ -34,6 +35,10 @@
 
     <div id="image_wrap">
     <form method='post'>
+
+      <input type="submit" value="Send to Laundry" name = "toLaundry">
+      <input type = "submit" value = "Delete Item" name = "deleteClothing">
+
       <p id = "header">Tops:</p>
       {% for top in topsWardrobe %}
           <img class = "img" src = "{{top.url}}" />
@@ -43,7 +48,7 @@
           <input type="checkbox" id="myCheck" name="{{top.key.urlsafe()}}">
           <label for="tops">Select &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</label>
       {% endfor %}
-      <p><br /><br /></p>
+      <p></p>
     </div>
 
     <p id = "header">Bottoms:</p>
@@ -56,7 +61,7 @@
           <input type="checkbox" id="myCheck" name="{{pant.key.urlsafe()}}">
           <label for="pants">Select &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</label>
       {% endfor %}
-      <p><br /><br /></p>
+      <p></p>
     </div>
 
 
@@ -70,7 +75,7 @@
           <input type="checkbox" id="myCheck" name="{{skirt.key.urlsafe()}}">
           <label for="pants">Select &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</label>
       {% endfor %}
-      <p><br /><br /></p>
+      <p></p>
     </div>
 
 
@@ -84,7 +89,7 @@
           <input type="checkbox" id="myCheck" name="{{dress.key.urlsafe()}}">
           <label for="pants">Select &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</label>
       {% endfor %}
-      <p><br /><br /></p>
+      <p></p>
     </div>
 
 
@@ -98,7 +103,7 @@
           <input type="checkbox" id="myCheck" name="{{sweater.key.urlsafe()}}">
           <label for="pants">Select &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</label>
       {% endfor %}
-      <p><br /><br /></p>
+      <p></p>
     </div>
 
 
@@ -112,7 +117,7 @@
           <input type="checkbox" id="myCheck" name="{{jacket.key.urlsafe()}}">
           <label for="pants">Select &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</label>
       {% endfor %}
-      <p><br /><br /></p>
+      <p></p>
     </div>
 
     <p id = "header">Coats:</p>
@@ -125,27 +130,27 @@
           <input type="checkbox" id="myCheck" name="{{coat.key.urlsafe()}}">
           <label for="pants">Select &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</label>
       {% endfor %}
-      <p><br /><br /></p>
+      <p></p>
     </div>
 
-      <input type="submit" value="Send to Laundry" name = "toLaundry">
-      <input type = "submit" value = "Delete Item" name = "deleteClothing">
     </form>
     </div>
 
-    <h1 class='laundryWords'>
-      Stuff below this is laundry
+    <h1 id='header'>
+      Currently in Laundry:
     </h1>
 
     <div>
       <form method='post'>
-      {% for clothing in laundry %}
-      <span class='itemContainer'>
-        Checkbox: <input type="checkbox" id="myCheck" name="{{clothing.key.urlsafe()}}">
-        <img class = "img" src = "{{clothing.url}}" width="500" height="375" />
-      </span>
-      {% endfor %}
-      <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
+        {% for clothing in laundry %}
+            <img class = "img" src = "{{clothing.url}}" />
+        {% endfor %}
+        <p></p>
+        {% for clothing in laundry %}
+            <input type="checkbox" id="myCheck" name="{{clothing.key.urlsafe()}}">
+            <label for="pants">Select &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</label>
+        {% endfor %}
+      <p><br /></p>
       <input type="submit" value="Do Laundry" name="toWardrobe">
     </form>
     </div>

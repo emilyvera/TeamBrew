@@ -14,15 +14,12 @@ function addOutfitToHistory(doneCallback){
   var today = new Date();
   var top = document.querySelector('#tops').value;
   var bottom= document.querySelector('#bottoms').value;
-  jQuery.post("/calendar", {today, top, bottom}, doneCallback);
+  jQuery.post("/calendar", {top, bottom}, doneCallback);
 }
 // TODO: Create an event handler for when the button is clicked
 // that calls queryGiphy using the displayResult function as the callback
 
-function submitClick() {
-    alert("saved")
 
-}
 
 function woreClick(){
   addOutfitToHistory( ()=> {
